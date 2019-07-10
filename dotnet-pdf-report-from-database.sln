@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D1110E77-6564-4C27-B505-33F39E1342EA}") = "dotnet-pdf-report-from-database", "dotnet-pdf-report-from-database.csproj", "{A6F42FC3-48FB-49F6-8A4A-AAA4E29688B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6F42FC3-48FB-49F6-8A4A-AAA4E29688B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F42FC3-48FB-49F6-8A4A-AAA4E29688B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F42FC3-48FB-49F6-8A4A-AAA4E29688B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F42FC3-48FB-49F6-8A4A-AAA4E29688B5}}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEF60B8C-BA3D-4EB3-8863-BF543BB3BE52}
+	EndGlobalSection
+EndGlobal
