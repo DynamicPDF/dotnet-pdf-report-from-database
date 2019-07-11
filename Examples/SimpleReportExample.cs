@@ -17,36 +17,36 @@ namespace PdfReportFromDatabase.Examples
 
         internal static void Run(string outputFilePath)
         {
-            // Create the document's layout from a DLEX template
-            DocumentLayout documentLayout = new DocumentLayout(Util.GetResourcePath("SimpleReport.dlex"));
+// Create the document's layout from a DLEX template
+DocumentLayout documentLayout = new DocumentLayout(Util.GetResourcePath("SimpleReport.dlex"));
 
-            // Attach to the ReportDataRequired event
-            documentLayout.ReportDataRequired += DocumentLayout_ReportDataRequired;
+// Attach to the ReportDataRequired event
+documentLayout.ReportDataRequired += DocumentLayout_ReportDataRequired;
 
-            // Specify the data
-            NameValueLayoutData layoutData = new NameValueLayoutData();
-            layoutData.Add("ReportCreatedFor", "Alex Smith");
+// Specify the data
+NameValueLayoutData layoutData = new NameValueLayoutData();
+layoutData.Add("ReportCreatedFor", "Alex Smith");
 
-            // Layout the document and save the PDF
-            Document document = documentLayout.Layout(layoutData);
-            document.Draw(outputFilePath);
+// Layout the document and save the PDF
+Document document = documentLayout.Layout(layoutData);
+document.Draw(outputFilePath);
         }
 
-        private static void DocumentLayout_ReportDataRequired(object sender, ceTe.DynamicPDF.LayoutEngine.Data.ReportDataRequiredEventArgs args)
-        {
-            if (args.ElementId == "ProductsReport")
-            {
-                string sqlString =
-                    "SELECT ProductName, QuantityPerUnit, UnitPrice " +
-                    "FROM   Products ";
+private static void DocumentLayout_ReportDataRequired(object sender, ReportDataRequiredEventArgs args)
+{
+    if (args.ElementId == "ProductsReport")
+    {
+        string sqlString =
+            "SELECT ProductName, QuantityPerUnit, UnitPrice " +
+            "FROM   Products ";
 
-                SqlConnection connection = new SqlConnection(connectionString);
-                SqlCommand command = new SqlCommand(sqlString, connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                args.ReportData = new DataReaderReportData(connection, reader);
-                // Note that a DataTableReportData class is also available if you need to use a DataTable instead of a DataReader
-            }
-        }
+        SqlConnection connection = new SqlConnection(connectionString);
+        SqlCommand command = new SqlCommand(sqlString, connection);
+        connection.Open();
+        SqlDataReader reader = command.ExecuteReader();
+        args.ReportData = new DataReaderReportData(connection, reader);
+        // Note that a DataTableReportData class is also available if you need to use a DataTable instead of a DataReader
+    }
+}
     }
 }

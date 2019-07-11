@@ -31,7 +31,7 @@ namespace PdfReportFromDatabase.Examples
             document.Draw(outputFilePath);
         }
 
-        private static void DocumentLayout_ReportDataRequired(object sender, ceTe.DynamicPDF.LayoutEngine.Data.ReportDataRequiredEventArgs args)
+        private static void DocumentLayout_ReportDataRequired(object sender, ReportDataRequiredEventArgs args)
         {
             if (args.ElementId == "ProductsReport")
             {
