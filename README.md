@@ -2,7 +2,7 @@
 These are example files showing how to use database queries to create PDF
 reports with DynamicPDF ReportWriter or Core Suite for
 .NET. A blog post on this subject can be found here:  
-[Creating PDF Reports with Database Data (SQL)](https://www.dynamicpdf.com/Blog/post/2019/07/11/Creating-PDF-Reports-with-Database-Data-SQL.aspx)
+[Creating PDF Reports with Database Data (SQL)](https://www.dynamicpdf.com/Blog/post/Creating-PDF-Reports-with-Database-Data-SQL.aspx)
 
 ## Database
 To run these examples you will need access to a Northwind sample database.
