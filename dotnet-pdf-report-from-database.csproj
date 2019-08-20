@@ -48,9 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DynamicPDF.NETFramework40, Version=10.13.0.40, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
-      <HintPath>packages\ceTe.DynamicPDF.CoreSuite.NET.10.13.0.39011\lib\net40\DynamicPDF.NETFramework40.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="DynamicPDF.NETFramework40, Version=10.15.0.40, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
+      <HintPath>packages\ceTe.DynamicPDF.CoreSuite.NET.10.15.0.39333\lib\net40\DynamicPDF.NETFramework40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
