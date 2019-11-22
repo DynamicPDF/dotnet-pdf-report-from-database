@@ -27,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,8 +50,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DynamicPDF.NETFramework40, Version=10.15.0.40, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
-      <HintPath>packages\ceTe.DynamicPDF.CoreSuite.NET.10.15.0.39333\lib\net40\DynamicPDF.NETFramework40.dll</HintPath>
+    <Reference Include="DynamicPDF.NETFramework40, Version=10.19.0.40, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
+      <HintPath>packages\ceTe.DynamicPDF.CoreSuite.NET.10.19.0.40019\lib\net40\DynamicPDF.NETFramework40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -92,4 +94,11 @@
     <Content Include="Resources\Northwind Logo.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\ceTe.DynamicPDF.CoreSuite.NET.10.19.0.40019\build\net40\ceTe.DynamicPDF.CoreSuite.NET.targets" Condition="Exists('packages\ceTe.DynamicPDF.CoreSuite.NET.10.19.0.40019\build\net40\ceTe.DynamicPDF.CoreSuite.NET.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\ceTe.DynamicPDF.CoreSuite.NET.10.19.0.40019\build\net40\ceTe.DynamicPDF.CoreSuite.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ceTe.DynamicPDF.CoreSuite.NET.10.19.0.40019\build\net40\ceTe.DynamicPDF.CoreSuite.NET.targets'))" />
+  </Target>
 </Project>
