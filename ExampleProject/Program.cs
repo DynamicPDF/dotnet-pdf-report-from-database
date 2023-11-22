@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Text;
 
-namespace Blog2023Example
+namespace ExampleProject
 {
     class Program
     {
